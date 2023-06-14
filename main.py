@@ -106,8 +106,10 @@ def main():
     for i, word in enumerate(user_tasks_list, start=1):
         if IS_DEBUG_MSG:
             print(f"Исходное слово >>>> {word} <<<<")
+
+        user_test_word = get_shuffle_word(word)
         while True:
-            answer = input(f"Угадай слово № {i} >>>> {get_shuffle_word(word)}: ").lower().strip()
+            answer = input(f"Угадай слово № {i} >>>> {user_test_word}: ").lower().strip()
             if answer != "":
                 break
 
